@@ -1,14 +1,21 @@
 #include <stdio.h>
 int main()
 {
-	printf("请分别输入身高的英尺和英寸，""如输入\"5 7\"表示5英尺7英尺：");
+	int num1 = 5;
+	int num2 = 2;
+	double result1;
+	double result2;
+	double result3;
+	double result4;
 	
-	int foot;
-	int inch;
-	scanf("%d %d",&foot,&inch);
+	result1 = num1 / num2;
+	result2 = num1 % num2;
+	result3 = num1++;
+	result4 = --num2;
 	
-	printf("身高是%f米。\n",((foot+inch /12)*0.3048));
-	
+	printf("num1 / num2 = %lf\n",result1);
+	printf("num1 % num2 = %lf\n",result2);
+	printf("num1++ = %ld\n",result3);
+	printf("--num2 = %d\n",result4);
 	return 0;
-	
 }
