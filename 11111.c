@@ -5,7 +5,7 @@ int main()
 	printf("请输入月份，我来判断天数：");
 	scanf("%d",&month);
 	
-	switch(month);
+	switch(month)
 	{
 	case 1:
 		printf("1月有31天\n");
