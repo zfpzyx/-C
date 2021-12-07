@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include "调用函数.c"
+#include <math.h>
+
+int fun(int n) {
+	if (n <= 3)
+		return n;
+	else
+		return fun(n - 1) + fun(n - 3);
+}
 
 int main() {
-	int value;
-	register int i;
-	printf("请输入循环执行的变量 （按0退出）");
-	while (scanf("%d", &value) == 1 && value > 0) {
-		for (i = value; i >= 0; i--) {
-			counter(i);
-		}
-
-	}
-
+	int n;
+	while (scanf("%d", &n) && n)
+		printf("%d\n", fun(n));
 	return 0;
 }
